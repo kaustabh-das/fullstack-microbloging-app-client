@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import { AuthContext } from "../helpers/AuthContext";
 
 function CreatePost() {
-  const { authState } = useContext(AuthContext);
+//   const { authState } = useContext(AuthContext);
 
   let history = useHistory();
 
