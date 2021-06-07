@@ -7,7 +7,7 @@ import { AuthContext } from "../helpers/AuthContext";
 function Home() {
   const [listOfPosts, setlistOfPosts] = useState([]);
   const [likedPosts, setlikedPosts] = useState([]);
-  const { authState } = useContext(AuthContext);
+//   const { authState } = useContext(AuthContext);
 
   let history = useHistory(); // The useHistory hook gives you access to the history instance that you may use to navigate.
 
@@ -60,7 +60,7 @@ function Home() {
           setlikedPosts(
             likedPosts.filter((id) => {
               // The includes() method determines whether a string contains the characters of a specified string. This method returns true if the string contains the characters, and false if not.
-              return id != postId;
+              return id !== postId;
             })
           );
         } else {
