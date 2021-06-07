@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Link, Route, Switch, useHistory } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import CreatePost from "./pages/CreatePost";
 import Post from "./pages/Post";
@@ -15,7 +15,7 @@ import axios from "axios";
 function App() {
   const [authState, setAuthState] = useState({username: "", id: 0, status: false});
 
-  let history = useHistory();
+//   let history = useHistory();
 
   useEffect(() => {
     axios.get('http://localhost:3001/auth/validatetoken', {   // This is a middleware varification route, to verify that the user did a real request. After this it goes to headers and get a token. 
